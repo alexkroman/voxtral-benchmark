@@ -1,0 +1,9 @@
+transformers>=5.2.0
+mistral-common[audio]
+accelerate
+soundfile
+soxr
+librosa
+datasets
+torch
+jiwer
