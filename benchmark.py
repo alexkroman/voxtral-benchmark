@@ -95,7 +95,7 @@ def benchmark_voxtral_mini(samples, device: str):
 
             t0 = time.perf_counter()
             with torch.no_grad():
-                outputs = model.generate(**inputs, max_new_tokens=1024)
+                outputs = model.generate(**inputs, max_new_tokens=128)
             sync_device()
             t1 = time.perf_counter()
 
@@ -157,7 +157,7 @@ def benchmark_voxtral_realtime(samples, device: str):
 
         t0 = time.perf_counter()
         with torch.no_grad():
-            outputs = model.generate(**inputs)
+            outputs = model.generate(**inputs, max_new_tokens=128)
         sync_device()
         t1 = time.perf_counter()
 
